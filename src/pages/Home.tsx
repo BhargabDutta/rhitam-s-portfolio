@@ -48,7 +48,7 @@ const Home: React.FC = () => {
     <>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden" style={{
-    backgroundImage: 'url(./src/components/images/thirdvid.png)',
+    backgroundImage: `url(${thirdvid})`,
     backgroundSize: 'cover' ,
     backgroundPosition: 'center',
   }}>
