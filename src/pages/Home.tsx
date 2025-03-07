@@ -289,14 +289,9 @@ const Home: React.FC = () => {
 // Sample data
 const featuredWorks = [
   {
-    title: "HP Pavilion | Laptop commercial",
-    // category: "Photography Series",
-    image: firstvid
-  },
-  {
-    title: "Sony - WF XB700 | Earbuds commercial",
-    // category: "Short Film",
-    image: secondvid
+    title: "Jewelry fashion film | Curiocottage",
+    // category: "Music Video",
+    image: fifthvid
   },
   {
     title: "Samsung Commercial | Circle Search",
@@ -309,14 +304,19 @@ const featuredWorks = [
     image: fourthvid
   },
   {
-    title: "Jewelry fashion film | Curiocottage",
-    // category: "Music Video",
-    image: fifthvid
+    title: "HP Pavilion | Laptop commercial",
+    // category: "Photography Series",
+    image: firstvid
   },
   {
     title: "Air fryer Ad.",
     // category: "Commercial",
     image: sixthvid
+  },
+  {
+    title: "Sony - WF XB700 | Earbuds commercial",
+    // category: "Short Film",
+    image: secondvid
   }
 ];
 

@@ -1,6 +1,6 @@
 /* Default background for larger screens (desktop/tablet) */
 .hero-background {
-    background-image: url('../images/thirdvid.png');
+    background-image: url('../images/desktopImage.png');
     background-size: cover;
     background-position: center;
   }
@@ -8,7 +8,7 @@
   /* Background for mobile devices */
   @media only screen and (max-width: 700px) {
     .hero-background {
-      background-image: url('../images/mobileImage.png'); /* Use any other mobile-specific image */
+      background-image: url('../images/mobileImage1.png'); /* Use any other mobile-specific image */
     }
   }
   
