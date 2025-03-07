@@ -47,9 +47,9 @@ const Portfolio: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
               My <span className="text-gradient">Work</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            {/* <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               A collection of my work in filmmaking and photography, showcasing diverse projects and visual storytelling.
-            </p>
+            </p> */}
           </motion.div>
 
           {/* <div className="flex justify-center mb-12">
@@ -192,15 +192,15 @@ interface PortfolioItem {
 const portfolioItems: PortfolioItem[] = [
   {
     type: 'videos',
-    title: 'HP Pavilion | Laptop commercial',
-    thumbnail: firstvid,
-    content: "https://www.youtube.com/embed/uyYReBOneoI?si=ETNk8y3H-QBe6dx4"
+    title: 'Showreel',
+    thumbnail: eighthvid,
+    content: "https://www.youtube.com/embed/JBzdNjtYbTs?si=GPMSTpzlIoG57r7Y",
   },
   {
     type: 'videos',
-    title: 'Sony - WF XB700 | Earbuds commercial',
-    thumbnail: secondvid,
-    content: "https://www.youtube.com/embed/vzuSo-heBCU?si=gjAc58bRNFU7oONW",
+    title: 'Jewelry fashion film | Curiocottage',
+    thumbnail: fifthvid,
+    content: "https://www.youtube.com/embed/m0cYJGiVWkk?si=66iv_62LqoJDCAma",
   },
   {
     type: 'videos',
@@ -216,9 +216,9 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     type: 'videos',
-    title: 'Jewelry fashion film | Curiocottage',
-    thumbnail: fifthvid,
-    content: "https://www.youtube.com/embed/m0cYJGiVWkk?si=66iv_62LqoJDCAma",
+    title: 'HP Pavilion | Laptop commercial',
+    thumbnail: firstvid,
+    content: "https://www.youtube.com/embed/uyYReBOneoI?si=ETNk8y3H-QBe6dx4"
   },
   {
     type: 'videos',
@@ -228,16 +228,16 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     type: 'videos',
+    title: 'Sony - WF XB700 | Earbuds commercial',
+    thumbnail: secondvid,
+    content: "https://www.youtube.com/embed/vzuSo-heBCU?si=gjAc58bRNFU7oONW",
+  },
+  {
+    type: 'videos',
     title: 'Rivela Serum',
     thumbnail: seventhvid,
     content: "https://www.youtube.com/embed/FwKLw7_cv9k?si=Hqqh6l5CjU7ubJBM",
   },
-  {
-    type: 'videos',
-    title: 'Showreel',
-    thumbnail: eighthvid,
-    content: "https://www.youtube.com/embed/JBzdNjtYbTs?si=GPMSTpzlIoG57r7Y",
-  }
 ];
 
 export default Portfolio;

@@ -9,7 +9,7 @@ import thirdvid from "../components/images/thirdvid.png";
 import fourthvid from "../components/images/forthvid.png";
 import fifthvid from "../components/images/fifthvid.png";
 import sixthvid from "../components/images/sixthvid.png";
-
+import "../components/styles/style.css";
 const Home: React.FC = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -47,11 +47,7 @@ const Home: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden" style={{
-    backgroundImage: `url(${thirdvid})`,
-    backgroundSize: 'cover' ,
-    backgroundPosition: 'center',
-  }}>
+      <section className="hero-background relative h-screen flex items-center justify-center overflow-hidden">
         {/* <div className="absolute inset-0 z-0">
           <video
             className="w-full h-full object-cover opacity-40"
@@ -168,7 +164,7 @@ const Home: React.FC = () => {
             >
               My <span className="text-gradient">Work</span>
             </motion.h2>
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -176,7 +172,7 @@ const Home: React.FC = () => {
               className="text-gray-300 max-w-2xl mx-auto"
             >
               A selection of my recent projects spanning film and photography
-            </motion.p>
+            </motion.p> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

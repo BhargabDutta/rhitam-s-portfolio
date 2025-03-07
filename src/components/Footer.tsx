@@ -9,22 +9,22 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <Camera className="h-6 w-6 text-accent-100" />
+              {/* <Camera className="h-6 w-6 text-accent-100" /> */}
               <span className="text-lg font-display font-bold">RHITAM SOIBAM</span>
             </Link>
-            <p className="text-gray-400 mb-4">
+            {/* <p className="text-gray-400 mb-4">
               Capturing moments, creating stories, and bringing visions to life through the lens.
-            </p>
+            </p> */}
             <div className="flex gap-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent-100 transition-colors">
+              <a href="https://www.instagram.com/rhitam_soibam?igsh=MThsZGFhcGQyd3FuOA==" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent-100 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent-100 transition-colors">
+              <a href="https://youtube.com/@rhitamsoibam?si=bY2_-qWdgaptCAxd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent-100 transition-colors">
                 <Youtube size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent-100 transition-colors">
+              {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent-100 transition-colors">
                 <Twitter size={20} />
-              </a>
+              </a> */}
             </div>
           </div>
           
