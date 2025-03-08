@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           <NavLink to="/" className="flex items-center gap-2">
             {/* <Camera className="h-8 w-8 text-accent-100" /> */}
-            <span className="text-xl font-display font-bold">RHITAM SOIBAM</span>
+            <span className="text-xl font-display font-bold">RHITAM SOIBAM<br/><span style={{fontWeight:"normal"}}>Cinematographer</span></span>
           </NavLink>
 
           {/* Desktop Navigation */}
