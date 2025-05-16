@@ -9,6 +9,8 @@ import fifthvid from "../components/images/fifthvid.png";
 import sixthvid from "../components/images/sixthvid.png";
 import seventhvid from "../components/images/seventhvid.png";
 import eighthvid from "../components/images/eighthvid.png";
+import ninthvid from "../components/images/ninthvid.png";
+import tenthvid from "../components/images/tenthvid.jpg";
 
 // import admad from "../components/videos/AdMad Submission_1.mp4";
 // import C0141 from "../components/videos/C0141_1.mp4";
@@ -238,6 +240,18 @@ const portfolioItems: PortfolioItem[] = [
     thumbnail: seventhvid,
     content: "https://www.youtube.com/embed/FwKLw7_cv9k?si=Hqqh6l5CjU7ubJBM",
   },
+  {
+    type: 'videos',
+    title: 'Ad Film',
+    thumbnail: ninthvid,
+    content: "https://youtu.be/8CyH0SfHXZ0?si=kRbo-QNlJJmamabh",
+  },
+  {
+    type: 'videos',
+    title: 'Music Video',
+    thumbnail: tenthvid,
+    content: "https://youtu.be/3I1SIL5NzJw?si=7-Bi7mdHFYMEPLb6",
+  }
 ];
 
 export default Portfolio;
