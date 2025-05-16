@@ -79,13 +79,13 @@ const Home: React.FC = () => {
                 to="/portfolio"
                 className="bg-accent-100 hover:bg-accent-200 text-white px-8 py-3 rounded-full font-medium transition-all duration-300"
               >
-                View Portfolio
+                View Work
               </Link>
               <Link
-                to="/contact"
+                to="https://www.instagram.com/rhitam_soibam?igsh=MThsZGFhcGQyd3FuOA==" target='_blank'
                 className="bg-transparent border border-white hover:border-accent-100 hover:text-accent-100 px-8 py-3 rounded-full font-medium transition-all duration-300"
               >
-                Get in Touch
+                View Instagram
               </Link>
             </div>
           </motion.div>
