@@ -212,15 +212,15 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     type: 'videos',
-    title: 'Ad Film',
+    title: 'Amoha Ad Film',
     thumbnail: ninthvid,
-    content: "https://youtu.be/8CyH0SfHXZ0?si=kRbo-QNlJJmamabh",
+    content: "https://www.youtube.com/embed/8CyH0SfHXZ0?si=fU-CWCHi1QqJwMNh",
   },
   {
     type: 'videos',
-    title: 'Music Video',
+    title: 'Aadat Music Video',
     thumbnail: tenthvid,
-    content: "https://youtu.be/3I1SIL5NzJw?si=7-Bi7mdHFYMEPLb6",
+    content: "https://www.youtube.com/embed/3I1SIL5NzJw?si=pZzGBQIy0sOOsJRg",
   },
   {
     type: 'videos',

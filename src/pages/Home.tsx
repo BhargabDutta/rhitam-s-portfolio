@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ChevronDown, Play, Camera, Award } from 'lucide-react';
-import firstvid from "../components/images/firstvid.png";
+import ninthvid from "../components/images/ninthvid.png";
 import secondvid from "../components/images/secondvid.png";
 import thirdvid from "../components/images/thirdvid.png";
 import fourthvid from "../components/images/forthvid.png";
 import fifthvid from "../components/images/fifthvid.png";
-import sixthvid from "../components/images/sixthvid.png";
+import tenthvid from "../components/images/tenthvid.jpg";
 import "../components/styles/style.css";
 const Home: React.FC = () => {
   const controls = useAnimation();
@@ -304,14 +304,14 @@ const featuredWorks = [
     image: fourthvid
   },
   {
-    title: "HP Pavilion | Laptop commercial",
+    title: "Amoha Ad Film",
     // category: "Photography Series",
-    image: firstvid
+    image: ninthvid
   },
   {
-    title: "Air fryer Ad.",
+    title: "AAadat Music Video",
     // category: "Commercial",
-    image: sixthvid
+    image: tenthvid
   },
   {
     title: "Sony - WF XB700 | Earbuds commercial",
