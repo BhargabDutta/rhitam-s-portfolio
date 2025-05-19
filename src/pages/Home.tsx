@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ChevronDown, Play, Camera, Award } from 'lucide-react';
+import { useMediaQuery } from 'react-responsive';
 import ninthvid from "../components/images/ninthvid.png";
 import secondvid from "../components/images/secondvid.png";
 import thirdvid from "../components/images/thirdvid.png";
@@ -10,6 +11,8 @@ import fourthvid from "../components/images/forthvid.png";
 import fifthvid from "../components/images/fifthvid.png";
 import tenthvid from "../components/images/tenthvid.jpg";
 import "../components/styles/style.css";
+import desktopVideo from "../components/images/desktop.mp4";
+import mobileVideo from "../components/images/mobile.mp4";
 const Home: React.FC = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -44,77 +47,69 @@ const Home: React.FC = () => {
     },
   };
 
+  const isDesktop = useMediaQuery({ minWidth: 768 }); // Adjust breakpoint as needed
+  const videoSource = isDesktop ? desktopVideo : mobileVideo;
+
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-background relative h-screen flex items-center justify-center overflow-hidden">
-        {/* <div className="absolute inset-0 z-0">
-          <video
-            className="w-full h-full object-cover opacity-40"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-filmmaker-recording-a-movie-scene-with-a-camera-34486-large.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-dark-300/70 to-dark-200"></div>
-        </div> */}
-
-        <div className="container mx-auto px-4 md:px-6 z-10 text-center" 
+    <section className="hero-background relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Video */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
         >
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            {/* <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
-              <span className="text-gradient">Capturing</span> Stories Through Lens
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Filmmaker, Photographer, and Visual Storyteller based in Mumbai
-            </p> */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-52">
-              <Link
-                to="/portfolio"
-                className="bg-accent-100 hover:bg-accent-200 text-white px-8 py-3 rounded-full font-medium transition-all duration-300"
-              >
-                View Work
-              </Link>
-              <Link
-                to="https://www.instagram.com/rhitam_soibam?igsh=MThsZGFhcGQyd3FuOA==" target='_blank'
-                className="bg-transparent border border-white hover:border-accent-100 hover:text-accent-100 px-8 py-3 rounded-full font-medium transition-all duration-300"
-              >
-                View Instagram
-              </Link>
-            </div>
-          </motion.div>
-        </div>
+          <source src={videoSource} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
-        <div className="scroll-indicator">
-          <span>Scroll Down</span>
-          <ChevronDown size={20} />
-        </div>
-      </section>
+      {/* Content Container */}
+      <div className="container mx-auto px-4 md:px-6 z-10 text-center relative">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-52">
+            <Link
+              to="/portfolio"
+              className="bg-accent-100 hover:bg-accent-200 text-white px-8 py-3 rounded-full font-medium transition-all duration-300"
+            >
+              View Work
+            </Link>
+            <Link
+              to="https://www.instagram.com/rhitam_soibam?igsh=MThsZGFhcGQyd3FuOA=="
+              target="_blank"
+              className="bg-transparent border border-white hover:border-accent-100 hover:text-accent-100 px-8 py-3 rounded-full font-medium transition-all duration-300"
+            >
+              View Instagram
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="scroll-indicator z-10 relative">
+        <span>Scroll Down</span>
+        <ChevronDown size={20} />
+      </div>
+    </section>
 
       {/* About Section */}
-      <section className="py-20 bg-dark-300">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="py-20 bg-dark-300 text-center h-screen w-full">
+        <div className="container mx-auto px-4 md:px-6 inherit h-full flex flex-col justify-center items-center">
           <motion.div
             ref={ref}
             initial="hidden"
             animate={controls}
             variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+            className="w-full"
           >
-            <motion.div variants={fadeInUp}>
-              <img
-                src="https://media-ccu1-2.cdn.whatsapp.net/v/t61.24694-24/473399506_4067823980170027_5589783832990363243_n.jpg?ccb=11-4&oh=01_Q5AaIDUyabySoCFudVSHX7XZMswLj2wPTwvgGtbsOO52s3Is&oe=67D53112&_nc_sid=5e03e0&_nc_cat=108"
-                alt="Rhitam Soibam"
-                className="rounded-lg shadow-2xl w-full h-auto"
-              />
-            </motion.div>
-
             <motion.div variants={fadeInUp}>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
                 About <span className="text-gradient">Rhitam Soibam</span>
