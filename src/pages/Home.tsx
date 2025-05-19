@@ -61,7 +61,7 @@ const Home: React.FC = () => {
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-contain md:object-cover"
         >
           <source src={videoSource} type="video/mp4" />
           Your browser does not support the video tag.
