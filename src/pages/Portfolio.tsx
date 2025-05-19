@@ -6,7 +6,6 @@ import secondvid from "../components/images/secondvid.png";
 import thirdvid from "../components/images/thirdvid.png";
 import fourthvid from "../components/images/forthvid.png";
 import fifthvid from "../components/images/fifthvid.png";
-import sixthvid from "../components/images/sixthvid.png";
 import seventhvid from "../components/images/seventhvid.png";
 import eighthvid from "../components/images/eighthvid.png";
 import ninthvid from "../components/images/ninthvid.png";
@@ -49,39 +48,7 @@ const Portfolio: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
               My <span className="text-gradient">Work</span>
             </h1>
-            {/* <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A collection of my work in filmmaking and photography, showcasing diverse projects and visual storytelling.
-            </p> */}
           </motion.div>
-
-          {/* <div className="flex justify-center mb-12">
-            <div className="inline-flex bg-dark-300 rounded-full p-1">
-              <button
-                onClick={() => handleTabChange('all')}
-                className={`px-6 py-2 rounded-full transition-all ${
-                  activeTab === 'all' ? 'bg-accent-100 text-white' : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                All Projects
-              </button>
-              <button
-                onClick={() => handleTabChange('videos')}
-                className={`px-6 py-2 rounded-full transition-all ${
-                  activeTab === 'videos' ? 'bg-accent-100 text-white' : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                Videos
-              </button>
-              <button
-                onClick={() => handleTabChange('photos')}
-                className={`px-6 py-2 rounded-full transition-all ${
-                  activeTab === 'photos' ? 'bg-accent-100 text-white' : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                Photos
-              </button>
-            </div>
-          </div> */}
 
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -161,18 +128,6 @@ const Portfolio: React.FC = () => {
                 &times;
               </button>
             </div>
-            {/* <div className="p-6">
-              <h3 className="text-2xl font-semibold mb-2">{selectedItem.title}</h3>
-              <p className="text-accent-100 mb-4">{selectedItem.category}</p>
-              <p className="text-gray-300 mb-6">{selectedItem.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {selectedItem.tags.map((tag, index) => (
-                  <span key={index} className="bg-dark-200 px-3 py-1 rounded-full text-sm text-gray-300">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div> */}
           </motion.div>
         </div>
       )}
@@ -233,12 +188,6 @@ const portfolioItems: PortfolioItem[] = [
     title: 'HP Pavilion | Laptop commercial',
     thumbnail: firstvid,
     content: "https://www.youtube.com/embed/uyYReBOneoI?si=ETNk8y3H-QBe6dx4"
-  },
-  {
-    type: 'videos',
-    title: 'Air fryer Ad.',
-    thumbnail: sixthvid,
-    content: "https://www.youtube.com/embed/SQm5vgcKdGw?si=ZFgOK3U8KJA6TuqR",
   },
   {
     type: 'videos',

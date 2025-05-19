@@ -8,7 +8,7 @@ import ninthvid from "../components/images/ninthvid.png";
 import secondvid from "../components/images/secondvid.png";
 import thirdvid from "../components/images/thirdvid.png";
 import fourthvid from "../components/images/forthvid.png";
-import fifthvid from "../components/images/fifthvid.png";
+import eighthvid from "../components/images/eighthvid.png";
 import tenthvid from "../components/images/tenthvid.jpg";
 import "../components/styles/style.css";
 import desktopVideo from "../components/images/desktop.mp4";
@@ -117,30 +117,6 @@ const Home: React.FC = () => {
               <p className="text-gray-300 mb-8">
                 I am a budding cinematographer with a ton commercial work with an eye for stunning visuals. If you are into content that's cozy, playful and oddly satisfying, you've definitely found the place!
               </p>
-
-              {/* <div className="grid grid-cols-2 gap-6">
-                <div className="flex items-start gap-3">
-                  <Play className="text-accent-100 mt-1" size={20} />
-                  <div>
-                    <h3 className="font-semibold mb-1">Filmmaking</h3>
-                    <p className="text-gray-400 text-sm">Documentary, Commercial, Music Videos</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Camera className="text-accent-100 mt-1" size={20} />
-                  <div>
-                    <h3 className="font-semibold mb-1">Photography</h3>
-                    <p className="text-gray-400 text-sm">Portrait, Landscape, Event</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Award className="text-accent-100 mt-1" size={20} />
-                  <div>
-                    <h3 className="font-semibold mb-1">Awards</h3>
-                    <p className="text-gray-400 text-sm">National Film Awards, Mumbai Film Festival</p>
-                  </div>
-                </div>
-              </div> */}
             </motion.div>
           </motion.div>
         </div>
@@ -159,15 +135,6 @@ const Home: React.FC = () => {
             >
               My <span className="text-gradient">Work</span>
             </motion.h2>
-            {/* <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-gray-300 max-w-2xl mx-auto"
-            >
-              A selection of my recent projects spanning film and photography
-            </motion.p> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -209,50 +176,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Testimonials */}
-      {/* <section className="py-20 bg-dark-300">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-display font-bold mb-4"
-            >
-              Client <span className="text-gradient">Testimonials</span>
-            </motion.h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-dark-200 p-6 rounded-lg border border-gray-800"
-              >
-                <div className="flex items-center mb-4">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4"
-                  />
-                  <div>
-                    <h3 className="font-semibold">{testimonial.name}</h3>
-                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 italic">"{testimonial.text}"</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-dark-200 to-dark-300">
         <div className="container mx-auto px-4 md:px-6 text-center">
@@ -262,12 +185,6 @@ const Home: React.FC = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            {/* <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              Ready to bring your <span className="text-gradient">vision</span> to life?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's collaborate on your next project and create something extraordinary together.
-            </p> */}
             <Link
               to="/contact"
               className="bg-accent-100 hover:bg-accent-200 text-white px-8 py-3 rounded-full font-medium transition-all duration-300"
@@ -284,9 +201,9 @@ const Home: React.FC = () => {
 // Sample data
 const featuredWorks = [
   {
-    title: "Jewelry fashion film | Curiocottage",
+    title: "Showreel",
     // category: "Music Video",
-    image: fifthvid
+    image: eighthvid
   },
   {
     title: "Samsung Commercial | Circle Search",
