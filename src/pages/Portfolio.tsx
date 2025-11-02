@@ -10,6 +10,9 @@ import seventhvid from "../components/images/seventhvid.png";
 import eighthvid from "../components/images/eighthvid.png";
 import ninthvid from "../components/images/ninthvid.png";
 import tenthvid from "../components/images/tenthvid.jpg";
+import poshan from "../components/images/poshan.png";
+import poshan2 from "../components/images/poshan2.png";
+import showreel2025 from "../components/images/showreel2025.png";
 
 // import admad from "../components/videos/AdMad Submission_1.mp4";
 // import C0141 from "../components/videos/C0141_1.mp4";
@@ -149,7 +152,25 @@ interface PortfolioItem {
 const portfolioItems: PortfolioItem[] = [
   {
     type: 'videos',
-    title: 'Showreel',
+    title: 'Showreel 2025',
+    thumbnail: showreel2025,
+    content: "https://www.youtube.com/embed/Btc7Rxwux4M?si=E7rNZXvVVATRrfis",
+  },
+  {
+    type: 'videos',
+    title: 'Ad Film',
+    thumbnail: poshan2,
+    content: "https://www.youtube.com/embed/EApshw7rB9s?si=3Izol2Mv6NzhJdFv",
+  },
+  {
+    type: 'videos',
+    title: 'Poshan Audition',
+    thumbnail: poshan,
+    content: "https://www.youtube.com/embed/Q60nAqKjqKI?si=53UQXuKZTfvP6YvG",
+  },
+  {
+    type: 'videos',
+    title: 'Showreel 2024',
     thumbnail: eighthvid,
     content: "https://www.youtube.com/embed/JBzdNjtYbTs?si=GPMSTpzlIoG57r7Y",
   },
