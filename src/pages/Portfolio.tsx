@@ -62,7 +62,7 @@ const Portfolio: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="portfolio-item cursor-pointer h-52 md:h-auto"
+                className="portfolio-item cursor-pointer h-44 md:h-auto"
                 onClick={() => openModal(item)}
               >
                 {isVideoFile(item.thumbnail) ? (
@@ -79,18 +79,17 @@ const Portfolio: React.FC = () => {
                     muted
                     playsInline
                     preload="metadata"
-                    className="w-full h-80 object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 ) : (
                   <img
                     src={item.thumbnail}
                     alt={item.title}
-                    className="w-full h-64 md:h-80 object-cover rounded-lg"
+                    className="w-full h-52 md:h-80 object-cover rounded-lg"
                     loading="lazy"
                   />
                 )}
-
-                <div className="portfolio-item-overlay bg-gradient-to-t from-dark-300/90 to-transparent">
+                <div className="portfolio-item-overlay">
                   <div className="absolute top-4 right-4">
                     {isVideoFile(item.thumbnail) ? (
                       <div className="bg-accent-100 p-2 rounded-full">
@@ -102,9 +101,9 @@ const Portfolio: React.FC = () => {
                       </div>
                     )}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <h3 className="text-xl font-semibold">{item.title}</h3>
                   {/* <p className="text-gray-300 text-sm mb-2">{item.category}</p> */}
-                  <p className="text-accent-100 font-medium">View Details</p>
+                  {/* <p className="text-accent-100 font-medium">View Details</p> */}
                 </div>
               </motion.div>
             ))}
