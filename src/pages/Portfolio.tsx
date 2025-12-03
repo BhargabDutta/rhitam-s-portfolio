@@ -168,6 +168,18 @@ interface PortfolioItem {
 const portfolioItems: PortfolioItem[] = [
   {
     type: 'videos',
+    title: 'Amoha Bags',
+    thumbnail: amohabags,
+    content: "https://www.youtube.com/embed/p-t5bUm75u0?si=hJfPnnyqLsja9_lK",
+  },
+  {
+    type: 'videos',
+    title: 'Deconstruct vitamin c serum',
+    thumbnail: deconstruct,
+    content: "https://www.youtube.com/embed/vAqcSmKZYzk?si=2q-MKHzKZNzre8qW",
+  },
+  {
+    type: 'videos',
     title: 'Showreel 2025',
     thumbnail: showreel2025,
     content: "https://www.youtube.com/embed/Btc7Rxwux4M?si=E7rNZXvVVATRrfis",
@@ -213,18 +225,6 @@ const portfolioItems: PortfolioItem[] = [
     title: 'Coolberg commercial',
     thumbnail: coolberg,
     content: "https://www.youtube.com/embed/oBTH-rzUhY0?si=1TXeKt07JErcC2IF",
-  },
-  {
-    type: 'videos',
-    title: 'Amoha Bags',
-    thumbnail: amohabags,
-    content: "https://www.youtube.com/embed/p-t5bUm75u0?si=hJfPnnyqLsja9_lK",
-  },
-  {
-    type: 'videos',
-    title: 'Deconstruct vitamin c serum',
-    thumbnail: deconstruct,
-    content: "https://www.youtube.com/embed/vAqcSmKZYzk?si=2q-MKHzKZNzre8qW",
   },
   {
     type: 'videos',
