@@ -9,10 +9,14 @@ import amoha from "../components/images/Amoha.mp4";
 import jewelery from "../components/images/Jewelery.mp4";
 import poshan_ad from "../components/images/poshan ad.mp4";
 import poshan_audition from "../components/images/poshan audition.mp4";
-import showreel2025 from "../components/images/showreel2025.mp4";
+import amohabags from "../components/images/amohabags.mp4";
+import deconstruct from "../components/images/Deconstruct.mp4";
+import showreel2025 from "../components/images/showreel2025.jpeg";
 
-// import admad from "../components/videos/AdMad Submission_1.mp4";
-// import C0141 from "../components/videos/C0141_1.mp4";
+const isVideoFile = (src: string) => {
+  return /\.(mp4|webm|ogg)$/i.test(src);
+};
+
 const Portfolio: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'all' | 'videos' | 'photos'>('all');
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
@@ -61,18 +65,34 @@ const Portfolio: React.FC = () => {
                 className="portfolio-item cursor-pointer w-full"
                 onClick={() => openModal(item)}
               >
+                {isVideoFile(item.thumbnail) ? (
                 <video
+                  ref={(el) => {
+                    if (el) {
+                      el.muted = true;
+                      el.play().catch(() => {});
+                    }
+                  }}
                   src={item.thumbnail}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="auto"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
                   className="w-full h-80 object-cover rounded-lg"
                 />
+              ) : (
+                <img
+                  src={item.thumbnail}
+                  alt={item.title}
+                  className="w-full h-80 object-cover rounded-lg"
+                  loading="lazy"
+                />
+              )}
+
                 <div className="portfolio-item-overlay bg-gradient-to-t from-dark-300/90 to-transparent">
                   <div className="absolute top-4 right-4">
-                    {item.type === 'videos' ? (
+                    {isVideoFile(item.thumbnail) ? (
                       <div className="bg-accent-100 p-2 rounded-full">
                         <Play size={16} />
                       </div>
@@ -194,6 +214,18 @@ const portfolioItems: PortfolioItem[] = [
     title: 'Coolberg commercial',
     thumbnail: coolberg,
     content: "https://www.youtube.com/embed/oBTH-rzUhY0?si=1TXeKt07JErcC2IF",
+  },
+  {
+    type: 'videos',
+    title: 'Amoha Bags',
+    thumbnail: amohabags,
+    content: "https://www.youtube.com/embed/p-t5bUm75u0?si=hJfPnnyqLsja9_lK",
+  },
+  {
+    type: 'videos',
+    title: 'Deconstruct vitamin c serum',
+    thumbnail: deconstruct,
+    content: "https://www.youtube.com/embed/vAqcSmKZYzk?si=2q-MKHzKZNzre8qW",
   },
   {
     type: 'videos',
