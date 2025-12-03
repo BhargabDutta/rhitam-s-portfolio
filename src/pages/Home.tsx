@@ -33,10 +33,11 @@ const Home: React.FC = () => {
           {/* Background Video */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
             <video
-              autoPlay
-              loop
-              muted
-              playsInline
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
               className="absolute top-0 left-0 w-full h-full object-cover"
             >
               <source src={desktopVideo} type="video/mp4" />

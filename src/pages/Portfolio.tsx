@@ -63,7 +63,11 @@ const Portfolio: React.FC = () => {
               >
                 <video
                   src={item.thumbnail}
-                  autoPlay loop muted
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
                   className="w-full h-80 object-cover rounded-lg"
                 />
                 <div className="portfolio-item-overlay bg-gradient-to-t from-dark-300/90 to-transparent">
