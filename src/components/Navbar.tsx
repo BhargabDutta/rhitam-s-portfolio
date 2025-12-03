@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, Camera } from 'lucide-react';
+import { Menu, X} from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Navbar: React.FC = () => {
@@ -41,11 +41,6 @@ const Navbar: React.FC = () => {
             }>
               Home
             </NavLink>
-            <NavLink to="/portfolio" className={({ isActive }) => 
-              isActive ? 'nav-link active-nav-link' : 'nav-link'
-            }>
-              My Work
-            </NavLink>
             <NavLink to="/contact" className={({ isActive }) => 
               isActive ? 'nav-link active-nav-link' : 'nav-link'
             }>
@@ -78,11 +73,6 @@ const Navbar: React.FC = () => {
               `py-3 px-4 ${isActive ? 'text-accent-100' : 'text-white'}`
             }>
               Home
-            </NavLink>
-            <NavLink to="/portfolio" className={({ isActive }) => 
-              `py-3 px-4 ${isActive ? 'text-accent-100' : 'text-white'}`
-            }>
-              My Work
             </NavLink>
             <NavLink to="/contact" className={({ isActive }) => 
               `py-3 px-4 ${isActive ? 'text-accent-100' : 'text-white'}`

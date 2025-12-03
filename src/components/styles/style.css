@@ -1,8 +1,0 @@
-/* Default background for larger screens (desktop/tablet) */
-.hero-background {
-    /* background-image: url('../images/desktopImage.png'); */
-    background-size: cover;
-    background-position: center;
-  }
-  
-  
