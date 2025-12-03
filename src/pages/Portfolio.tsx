@@ -21,8 +21,8 @@ const Portfolio: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'all' | 'videos' | 'photos'>('all');
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
 
-  const filteredItems = activeTab === 'all' 
-    ? portfolioItems 
+  const filteredItems = activeTab === 'all'
+    ? portfolioItems
     : portfolioItems.filter(item => item.type === activeTab);
 
   const openModal = (item: PortfolioItem) => {
@@ -50,7 +50,7 @@ const Portfolio: React.FC = () => {
             </h1>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -62,33 +62,33 @@ const Portfolio: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="portfolio-item cursor-pointer w-full"
+                className="portfolio-item cursor-pointer h-52 md:h-auto"
                 onClick={() => openModal(item)}
               >
                 {isVideoFile(item.thumbnail) ? (
-                <video
-                  ref={(el) => {
-                    if (el) {
-                      el.muted = true;
-                      el.play().catch(() => {});
-                    }
-                  }}
-                  src={item.thumbnail}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-80 object-cover rounded-lg"
-                />
-              ) : (
-                <img
-                  src={item.thumbnail}
-                  alt={item.title}
-                  className="w-full h-80 object-cover rounded-lg"
-                  loading="lazy"
-                />
-              )}
+                  <video
+                    ref={(el) => {
+                      if (el) {
+                        el.muted = true;
+                        el.play().catch(() => { });
+                      }
+                    }}
+                    src={item.thumbnail}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-80 object-cover rounded-lg"
+                  />
+                ) : (
+                  <img
+                    src={item.thumbnail}
+                    alt={item.title}
+                    className="w-full h-64 md:h-80 object-cover rounded-lg"
+                    loading="lazy"
+                  />
+                )}
 
                 <div className="portfolio-item-overlay bg-gradient-to-t from-dark-300/90 to-transparent">
                   <div className="absolute top-4 right-4">
@@ -115,7 +115,7 @@ const Portfolio: React.FC = () => {
       {/* Modal */}
       {selectedItem && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80" onClick={closeModal}>
-          <motion.div 
+          <motion.div
             className="bg-dark-300 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -194,7 +194,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     type: 'videos',
     title: 'Samsung Commercial | Circle Search',
-    thumbnail:samsung,
+    thumbnail: samsung,
     content: "https://www.youtube.com/embed/T8dp26ykswM?si=DSzq4dndca9m85T0"
   },
   {
