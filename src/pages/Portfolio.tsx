@@ -10,6 +10,7 @@ import jewelery from "../components/images/Jewelery.mp4";
 import poshan_ad from "../components/images/poshan ad.mp4";
 import poshan_audition from "../components/images/poshan audition.mp4";
 import amohabags from "../components/images/amohabags.mp4";
+import loop from "../components/images/loop.mp4";
 import deconstruct from "../components/images/Deconstruct.mp4";
 import showreel2025 from "../components/images/showreel2025.jpeg";
 
@@ -166,6 +167,12 @@ interface PortfolioItem {
 
 // Sample portfolio data
 const portfolioItems: PortfolioItem[] = [
+  {
+    type: 'videos',
+    title: 'Urban thing Fashion Film',
+    thumbnail: loop,
+    content: "https://www.youtube.com/embed/p-t5bUm75u0?si=hJfPnnyqLsja9_lK",
+  },
   {
     type: 'videos',
     title: 'Amoha Bags',
