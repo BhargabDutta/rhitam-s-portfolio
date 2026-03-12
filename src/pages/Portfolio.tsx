@@ -171,7 +171,7 @@ const portfolioItems: PortfolioItem[] = [
     type: 'videos',
     title: 'Urban thing Fashion Film',
     thumbnail: loop,
-    content: "https://www.youtube.com/embed/p-t5bUm75u0?si=hJfPnnyqLsja9_lK",
+    content: "https://www.youtube.com/embed/K7KOXw5wf0U?si=Jeu9VJabPi8-dSIZ",
   },
   {
     type: 'videos',
