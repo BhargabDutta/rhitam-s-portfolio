@@ -12,7 +12,8 @@ import poshan_audition from "../components/images/poshan audition.mp4";
 import amohabags from "../components/images/amohabags.mp4";
 import loop from "../components/images/loop.mp4";
 import deconstruct from "../components/images/Deconstruct.mp4";
-import showreel2025 from "../components/images/showreel2025.jpeg";
+import showreel2026 from "../components/images/showreel2026.mp4";
+import GHI from "../components/images/GHI_loop.mp4";
 
 const isVideoFile = (src: string) => {
   return /\.(mp4|webm|ogg)$/i.test(src);
@@ -63,7 +64,7 @@ const Portfolio: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="portfolio-item cursor-pointer h-44 md:h-auto"
+                className="portfolio-item cursor-pointer h-44"
                 onClick={() => openModal(item)}
               >
                 {isVideoFile(item.thumbnail) ? (
@@ -169,6 +170,12 @@ interface PortfolioItem {
 const portfolioItems: PortfolioItem[] = [
   {
     type: 'videos',
+    title: 'GHI Stand Ad Film',
+    thumbnail: GHI,
+    content: "https://www.youtube.com/embed/cIqgRdZkUNk?si=LFFS4WLZ6U-NOt5Q",
+  },
+  {
+    type: 'videos',
     title: 'Urban thing Fashion Film',
     thumbnail: loop,
     content: "https://www.youtube.com/embed/K7KOXw5wf0U?si=Jeu9VJabPi8-dSIZ",
@@ -187,9 +194,9 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     type: 'videos',
-    title: 'Showreel 2025',
-    thumbnail: showreel2025,
-    content: "https://www.youtube.com/embed/Btc7Rxwux4M?si=E7rNZXvVVATRrfis",
+    title: 'Showreel 2026',
+    thumbnail: showreel2026,
+    content: "https://www.youtube.com/embed/scmn1RstI1o?si=T7liwk0y6AH3Yp7e",
   },
   {
     type: 'videos',
