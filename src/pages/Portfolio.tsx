@@ -15,6 +15,7 @@ import deconstruct from "../components/images/Deconstruct.mp4";
 import showreel2026 from "../components/images/showreel2026.mp4";
 import GHI from "../components/images/GHI_loop.mp4";
 import killr from "../components/images/killr.mp4";
+import oil from "../components/images/oil.mp4";
 const isVideoFile = (src: string) => {
   return /\.(mp4|webm|ogg)$/i.test(src);
 };
@@ -168,6 +169,12 @@ interface PortfolioItem {
 
 // Sample portfolio data
 const portfolioItems: PortfolioItem[] = [
+  {
+    type: 'videos',
+    title: 'Mars oil Blotter',
+    thumbnail: oil,
+    content: "https://www.youtube.com/embed/i3wvbkX2HZk?si=ZgBwqfbQtJG41avk",
+  },
   {
     type: 'videos',
     title: 'Kilrr Masala',
