@@ -205,13 +205,6 @@ const portfolioItems: PortfolioItem[] = [
   content: 'https://youtube.com/embed/sNzcPpYTTAc?si=pOyiN35jBZb2eNmj',
   layout: 'portrait',
 },
-{
-  type: 'videos',
-  title: 'SkinFit',
-  thumbnail: skinfit,
-  content: 'https://youtube.com/embed/Pb2j99iLJHU?si=aXPmgDdWtnuXEV7w',
-  layout: 'portrait',
-},
   {
     type: 'videos',
     title: 'Lip Fuzz',
@@ -236,6 +229,13 @@ const portfolioItems: PortfolioItem[] = [
     thumbnail: GHI,
     content: "https://www.youtube.com/embed/cIqgRdZkUNk?si=LFFS4WLZ6U-NOt5Q",
   },
+  {
+  type: 'videos',
+  title: 'SkinFit',
+  thumbnail: skinfit,
+  content: 'https://youtube.com/embed/Pb2j99iLJHU?si=aXPmgDdWtnuXEV7w',
+  layout: 'portrait',
+},
   {
     type: 'videos',
     title: 'Urban thing Fashion Film',
