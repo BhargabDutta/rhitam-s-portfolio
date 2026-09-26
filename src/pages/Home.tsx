@@ -80,7 +80,7 @@ const Home: React.FC = () => {
           </div>
         </section>
       )}
-      <Portfolio/>
+      <Portfolio isDesktop={isDesktop} />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-dark-200 to-dark-300">

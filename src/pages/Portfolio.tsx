@@ -47,6 +47,13 @@ const Portfolio: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
     ? portfolioItems
     : portfolioItems.filter(item => item.type === activeTab);
 
+const sortedItems = isDesktop
+  ? filteredItems
+  : [
+      ...filteredItems.filter(item => item.layout === 'portrait'),
+      ...filteredItems.filter(item => item.layout !== 'portrait'),
+    ];
+
     const videoItems = portfolioItems.filter(item =>
       isVideoFile(item.thumbnail)
     );
@@ -77,20 +84,22 @@ const Portfolio: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 auto-rows-[250px] gap-4"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 auto-rows-[250px] gap-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            {filteredItems.map((item, index) => (
+            {sortedItems.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`portfolio-item cursor-pointer overflow-hidden rounded-lg ${
-                  item.layout === 'portrait' ? 'row-span-3' : ''
-                }`}
+className={`portfolio-item cursor-pointer overflow-hidden rounded-lg ${
+  item.layout === 'portrait'
+    ? 'row-span-3'
+    : 'col-span-2 md:col-span-1'
+}`}
                 onClick={() => openModal(item)}
               >
                 {isVideoFile(item.thumbnail) ? (
