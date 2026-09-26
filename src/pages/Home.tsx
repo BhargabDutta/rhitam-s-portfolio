@@ -38,6 +38,9 @@ const Home: React.FC = () => {
                 muted
                 playsInline
                 preload="auto"
+                onCanPlay={() => {
+                  window.dispatchEvent(new Event('hero-video-ready'));
+                }}
               className="absolute top-0 left-0 w-full h-full object-cover"
             >
               <source src={desktopVideo} type="video/mp4" />

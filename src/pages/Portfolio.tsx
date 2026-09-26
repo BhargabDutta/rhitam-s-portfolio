@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Image as ImageIcon } from 'lucide-react';
 import coolberg from "../components/images/coolberg final.mp4";
@@ -23,13 +23,33 @@ const isVideoFile = (src: string) => {
   return /\.(mp4|webm|ogg)$/i.test(src);
 };
 
-const Portfolio: React.FC = () => {
+const Portfolio: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
   const [activeTab, setActiveTab] = useState<'all' | 'videos' | 'photos'>('all');
+
+  const [loadedVideoCount, setLoadedVideoCount] = useState(0);
+    const [heroReady, setHeroReady] = useState(false);
+
+    useEffect(() => {
+      const handleHeroReady = () => {
+        setHeroReady(true);
+      };
+
+      window.addEventListener('hero-video-ready', handleHeroReady);
+
+      return () => {
+        window.removeEventListener('hero-video-ready', handleHeroReady);
+      };
+    }, []);
+
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
 
   const filteredItems = activeTab === 'all'
     ? portfolioItems
     : portfolioItems.filter(item => item.type === activeTab);
+
+    const videoItems = portfolioItems.filter(item =>
+      isVideoFile(item.thumbnail)
+    );
 
   const openModal = (item: PortfolioItem) => {
     setSelectedItem(item);
@@ -75,21 +95,27 @@ const Portfolio: React.FC = () => {
               >
                 {isVideoFile(item.thumbnail) ? (
                   <video
-                    ref={(el) => {
-                      if (el) {
-                        el.muted = true;
-                        el.play().catch(() => { });
+                     src={
+                        (!isDesktop || heroReady) &&
+                        videoItems.findIndex(video => video === item) <= loadedVideoCount
+                          ? item.thumbnail
+                          : undefined
                       }
-                    }}
-                    src={item.thumbnail}
                     autoPlay
                     loop
                     muted
                     playsInline
-                    preload="metadata"
+                    preload="auto"
+                    onCanPlay={() => {
+                      const index = videoItems.findIndex(video => video === item);
+
+                      if (index === loadedVideoCount) {
+                        setLoadedVideoCount(prev => prev + 1);
+                      }
+                    }}
                     className="w-full h-full object-cover rounded-lg"
                   />
-                ) : (
+                                  ) : (
                   <img
                     src={item.thumbnail}
                     alt={item.title}
