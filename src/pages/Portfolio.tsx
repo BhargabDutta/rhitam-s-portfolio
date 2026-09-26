@@ -244,7 +244,7 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     type: 'videos',
-    title: 'AMOHA |Bags',
+    title: 'AMOHA |Campaign Film',
     thumbnail: amohabags,
     content: "https://www.youtube.com/embed/p-t5bUm75u0?si=hJfPnnyqLsja9_lK",
   },
