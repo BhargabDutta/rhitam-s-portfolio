@@ -17,6 +17,8 @@ import GHI from "../components/images/GHI_loop.mp4";
 import killr from "../components/images/killr.mp4";
 import oil from "../components/images/oil.mp4";
 import Lip from "../components/images/Lip.mp4";
+import mellow from "../components/images/Mellow.mp4";
+import skinfit from "../components/images/skinfit.mp4";
 const isVideoFile = (src: string) => {
   return /\.(mp4|webm|ogg)$/i.test(src);
 };
@@ -55,7 +57,7 @@ const Portfolio: React.FC = () => {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[180px] gap-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -66,7 +68,9 @@ const Portfolio: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="portfolio-item cursor-pointer h-44"
+                className={`portfolio-item cursor-pointer overflow-hidden rounded-lg ${
+                  item.layout === 'portrait' ? 'row-span-2' : ''
+                }`}
                 onClick={() => openModal(item)}
               >
                 {isVideoFile(item.thumbnail) ? (
@@ -159,17 +163,29 @@ const Portfolio: React.FC = () => {
 };
 
 interface PortfolioItem {
-  type: 'videos' | 'photos';
+  type: 'videos' | 'photos' | 'vertical';
   title: string;
-  // category: string;
   thumbnail: string;
   content: string;
-  // description: string;
-  // tags: string[];
+  layout?: 'portrait' | 'landscape';
 }
 
 // Sample portfolio data
 const portfolioItems: PortfolioItem[] = [
+{
+  type: 'videos',
+  title: 'Lip Mellow',
+  thumbnail: mellow,
+  content: 'https://youtube.com/embed/sNzcPpYTTAc?si=pOyiN35jBZb2eNmj',
+  layout: 'portrait',
+},
+{
+  type: 'videos',
+  title: 'SkinFit',
+  thumbnail: skinfit,
+  content: 'https://youtube.com/embed/Pb2j99iLJHU?si=aXPmgDdWtnuXEV7w',
+  layout: 'portrait',
+},
   {
     type: 'videos',
     title: 'Lip Fuzz',

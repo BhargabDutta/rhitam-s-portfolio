@@ -6,7 +6,7 @@ import { ChevronDown } from 'lucide-react';
 import { useMediaQuery } from 'react-responsive';
 import Portfolio from './Portfolio';
 // import "../components/styles/style.css";
-import desktopVideo from "../components/images/desktop.mp4";
+import desktopVideo from "../components/images/websiteBG.mp4";
 // import mobileVideo from "../components/images/mobile.mp4";
 const Home: React.FC = () => {
   const controls = useAnimation();
