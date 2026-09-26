@@ -84,7 +84,7 @@ const sortedItems = isDesktop
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 auto-rows-[250px] gap-4"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 auto-rows-[80px] md:auto-rows-[250px] gap-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -95,11 +95,13 @@ const sortedItems = isDesktop
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-className={`portfolio-item cursor-pointer overflow-hidden rounded-lg ${
-  item.layout === 'portrait'
-    ? 'row-span-3'
-    : 'col-span-2 md:col-span-1'
-}`}
+                className={`portfolio-item cursor-pointer overflow-hidden rounded-lg ${
+                item.layout === 'portrait'
+                  ? 'row-span-3'
+                  : item.layout === 'landscape'
+                    ? 'row-span-2 col-span-2 md:row-span-1 md:col-span-1'
+                    : 'row-span-2 md:row-span-1 col-span-2 md:col-span-1'
+              }`}
                 onClick={() => openModal(item)}
               >
                 {isVideoFile(item.thumbnail) ? (
