@@ -77,7 +77,7 @@ const Portfolio: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[180px] gap-4"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 auto-rows-[250px] gap-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
