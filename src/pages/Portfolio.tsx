@@ -89,7 +89,7 @@ const Portfolio: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`portfolio-item cursor-pointer overflow-hidden rounded-lg ${
-                  item.layout === 'portrait' ? 'row-span-2' : ''
+                  item.layout === 'portrait' ? 'row-span-3' : ''
                 }`}
                 onClick={() => openModal(item)}
               >
