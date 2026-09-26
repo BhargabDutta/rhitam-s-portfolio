@@ -115,7 +115,7 @@ const Portfolio: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
                     }}
                     className="w-full h-full object-cover rounded-lg"
                   />
-                                  ) : (
+                  ) : (
                   <img
                     src={item.thumbnail}
                     alt={item.title}
@@ -200,111 +200,111 @@ interface PortfolioItem {
 const portfolioItems: PortfolioItem[] = [
 {
   type: 'videos',
-  title: 'Lip Mellow',
+  title: 'MARS | Lip Mellow',
   thumbnail: mellow,
   content: 'https://youtube.com/embed/sNzcPpYTTAc?si=pOyiN35jBZb2eNmj',
   layout: 'portrait',
 },
   {
     type: 'videos',
-    title: 'Lip Fuzz',
+    title: 'MARS | Lip Fuzz',
     thumbnail: Lip,
     content: "https://www.youtube.com/embed/c5_HhGIi0F0?si=c-NmAlXzfhRIAyEo",
   },
   {
     type: 'videos',
-    title: 'Mars oil Blotter',
+    title: 'MARS | Oil Blotter',
     thumbnail: oil,
     content: "https://www.youtube.com/embed/i3wvbkX2HZk?si=ZgBwqfbQtJG41avk",
   },
   {
     type: 'videos',
-    title: 'Kilrr Masala',
+    title: 'KILLR | Ad Film',
     thumbnail: killr,
     content: "https://www.youtube.com/embed/tLR3sw1PXrM?si=s7P33bBIaJVB6lug",
   },
   {
     type: 'videos',
-    title: 'GHI Stand Ad Film',
+    title: 'GHI STRAND | Ad Film',
     thumbnail: GHI,
     content: "https://www.youtube.com/embed/cIqgRdZkUNk?si=LFFS4WLZ6U-NOt5Q",
   },
   {
   type: 'videos',
-  title: 'SkinFit',
+  title: 'MARS | SkinFit',
   thumbnail: skinfit,
   content: 'https://youtube.com/embed/Pb2j99iLJHU?si=aXPmgDdWtnuXEV7w',
   layout: 'portrait',
 },
   {
     type: 'videos',
-    title: 'Urban thing Fashion Film',
+    title: 'URBAN THING | Fashion Film',
     thumbnail: loop,
     content: "https://www.youtube.com/embed/K7KOXw5wf0U?si=Jeu9VJabPi8-dSIZ",
   },
   {
     type: 'videos',
-    title: 'Amoha Bags',
+    title: 'AMOHA |Bags',
     thumbnail: amohabags,
     content: "https://www.youtube.com/embed/p-t5bUm75u0?si=hJfPnnyqLsja9_lK",
   },
   {
     type: 'videos',
-    title: 'Deconstruct vitamin c serum',
+    title: 'DECONSTRUCT | vitamin c serum',
     thumbnail: deconstruct,
     content: "https://www.youtube.com/embed/vAqcSmKZYzk?si=2q-MKHzKZNzre8qW",
   },
+  // {
+  //   type: 'videos',
+  //   title: 'Showreel 2026',
+  //   thumbnail: showreel2026,
+  //   content: "https://www.youtube.com/embed/scmn1RstI1o?si=T7liwk0y6AH3Yp7e",
+  // },
   {
     type: 'videos',
-    title: 'Showreel 2026',
-    thumbnail: showreel2026,
-    content: "https://www.youtube.com/embed/scmn1RstI1o?si=T7liwk0y6AH3Yp7e",
-  },
-  {
-    type: 'videos',
-    title: 'Poshan Ad Film',
+    title: 'POSHAN | Ad Film',
     thumbnail: poshan_ad,
     content: "https://www.youtube.com/embed/EApshw7rB9s?si=3Izol2Mv6NzhJdFv",
   },
   {
     type: 'videos',
-    title: 'Poshan Audition',
+    title: 'POSHAN | Audition',
     thumbnail: poshan_audition,
     content: "https://www.youtube.com/embed/Q60nAqKjqKI?si=53UQXuKZTfvP6YvG",
   },
   {
     type: 'videos',
-    title: 'Jewelry fashion film | Curiocottage',
+    title: 'CURIOCOTTAGE | Jewelry fashion film',
     thumbnail: jewelery,
     content: "https://www.youtube.com/embed/m0cYJGiVWkk?si=66iv_62LqoJDCAma",
   },
   {
     type: 'videos',
-    title: 'Samsung Commercial | Circle Search',
+    title: 'SAMSUNG | Circle Search',
     thumbnail: samsung,
     content: "https://www.youtube.com/embed/T8dp26ykswM?si=DSzq4dndca9m85T0"
   },
   {
     type: 'videos',
-    title: 'Amoha Ad Film',
+    title: 'AMOHA | Ad Film',
     thumbnail: amoha,
     content: "https://www.youtube.com/embed/8CyH0SfHXZ0?si=fU-CWCHi1QqJwMNh",
   },
   {
     type: 'videos',
-    title: 'Aadat Music Video',
+    title: 'AADAT | Music Video',
     thumbnail: aadat,
     content: "https://www.youtube.com/embed/3I1SIL5NzJw?si=pZzGBQIy0sOOsJRg",
   },
   {
     type: 'videos',
-    title: 'Coolberg commercial',
+    title: 'COOLBERG | Product Film',
     thumbnail: coolberg,
     content: "https://www.youtube.com/embed/oBTH-rzUhY0?si=1TXeKt07JErcC2IF",
   },
   {
     type: 'videos',
-    title: 'Sony - WF XB700 | Earbuds commercial',
+    title: 'SONY | Earbuds commercial',
     thumbnail: sony,
     content: "https://www.youtube.com/embed/vzuSo-heBCU?si=gjAc58bRNFU7oONW",
   },
